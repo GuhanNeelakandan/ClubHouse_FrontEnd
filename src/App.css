@@ -1,38 +1,194 @@
-.App {
-  text-align: center;
+:root{
+  --textColor:rgb(65,64,66);
+  --btnbgColor:#3287b7;
+}
+html{
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin:0;
+  padding: 0;
+  font-size: 1em;
+  font-family: "Neutrif Pro";
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* *************************Welcome css********************************** */
+.welcome-style{
+  padding:3em 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 100vh;
+  background-color: #f2f0e4;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.welcome-style h1{
+  font-size:1.7em;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+  color: var(--textColor);
+}
+.welcome-info{
+  height: 210px;
+  overflow: auto;
+}
+.welcome-info p{
+  margin-bottom: 2em;
+  color: var(--textColor);
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+}
+.action-btn{
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.action-btn>a{
+  color: var(--textColor);
+  font-size: 1em;
+  font-weight: 400;
+  font-style: normal;
+}
+.logo{
+  width: 300px;
+  height: 300px;
+}
+/* *****************************Phone Confirmation page************************************* */
+.phone-container{
+  padding: 3em 1.7em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background-color: #f2f0e4;
+  position: relative;
 }
-
-.App-link {
-  color: #61dafb;
+.phone-container h1{
+  font-size: 1.3em;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+  color:var(--textColor) ;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.phone-container p{
+  font-size: 0.755em;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  width: 100%;
+  max-width: 270px;
+  text-align:center;
+  justify-content:space-evenly
+}
+.phone-container p span{
+  font-weight: 500;
+}
+/* ************************************************************ */
+.signup-profile-pic{
+  width:100px;
+  height:100px;
+  margin:0 auto;
+  position: relative;
+}
+.profile-pic{
+  width:100px;
+  border-radius:50%;
+  border:2px solid gray;
+  object-fit: cover;
+  height: 100px;
+}
+.add-picture-icon{
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: rgb(17, 0, 255);
+  background: white;
+  cursor: pointer;
+  z-index: 99;
+}
+/* ***************************chat left********************************** */
+.chat-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f2f0e4;
+  height: 100vh;
+  padding: 10px;
+}
+.club-logo{
+width: 250px;
+height: 150px;
+}
+.nav-list{
+  margin:20px 20px;
+  padding-left: 0;
+}
+.nav-item{
+  margin-top: 20px;
+  list-style-type: none;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding:10px 20px ;
+}
+.nav-item:hover{
+ transform: scale(1.1);
+ color: rgb(255, 221, 0);
+}
+li > span{
+  padding: 5px;
+  align-self: center;
+  text-align: center;
+}
+/* ****************************Rooms***************************** */
+.rooms{
+  display: flex!important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.project{
+  background-color: #f2f0e4;
+  border-radius: 30px;
+  font-family: cursive;
+  display: block;
+}
+.next-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.rooms{
+justify-content: space-evenly;
+}
+.box{
+  border: 1px solid black;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  text-align: center;
+  width: 150px;
+}
+/* ******************************************************* */
+.create-room{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.look{
+  width: 50% !important;
+}
+.projects{
+  margin-top: 20px;
+  background-color: #f2f0e4;
+  border-radius: 30px;
+  font-family: cursive;
+  display: block;
 }
