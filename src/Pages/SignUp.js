@@ -1,20 +1,20 @@
 import axios from 'axios'
 import { useFormik } from 'formik'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 function SignUp() {
     let navigate = useNavigate()
     let formik = useFormik({
         initialValues: {
-            name: '',
+            username: '',
             email: '',
             password: '',
         },
         validate: (values) => {
             const errors = {}
-            if (!values.name) {
-                errors.name = "Required";
+            if (!values.username) {
+                errors.username = "Required";
             }
             if (!values.email) {
                 errors.email = "Email Missing";
@@ -28,11 +28,13 @@ function SignUp() {
         },
         onSubmit: async (values) => {
             try {
-                let signupData = await axios.post('https://clubhouse-signin.herokuapp.com/signup', values);
-                if (signupData.data.message === "user added sucessfully") {
-                    navigate('/invite');
-                    alert("Successfully Registerd ")
-                } else {
+                let signupData = await axios.post('https://clubhouse-clone-rooms.herokuapp.com/room/signup', values);
+                if (signupData.data) {
+                    localStorage.setItem("club-app-user",JSON.stringify(signupData.data.user))
+                    alert("Successfull")
+                    navigate("/invite");
+                  }
+                else {
                     alert("Already email exist & please use another email id")
                 }
 
@@ -48,7 +50,7 @@ function SignUp() {
 
             <form  onSubmit={formik.handleSubmit}>
                 <div class="form-group">
-                    <input type="name" class="form-control mb-3" name="name" placeholder="Name" onChange={formik.handleChange} value={formik.values.name} />
+                    <input type="name" class="form-control mb-3" name="username" placeholder="User Name" onChange={formik.handleChange} value={formik.values.username} />
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control mb-3" name="email" placeholder="Email" onChange={formik.handleChange} value={formik.values.email}/>
