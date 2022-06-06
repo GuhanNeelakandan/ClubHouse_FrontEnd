@@ -11,13 +11,13 @@ function Rooms() {
     let handleLogout = () => {
         window.localStorage.removeItem('myapptoken');
         navigate('/invite');
-      };
+    };
 
-    function fetchData(){
+    function fetchData() {
         if (!localStorage.getItem("myapptoken")) {
-          navigate("/");
-        } 
-      }
+            navigate("/");
+        }
+    }
 
     useEffect(() => {
         axios.get('https://clubhouse-clone-rooms.herokuapp.com/room/getRoom', {
@@ -40,13 +40,31 @@ function Rooms() {
 
             <div className="container-fluid next-page">
                 <div className="row mt-5 rooms">
+                    <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                        <div class="card-body box">
+                            <h5 class="card-title"><strong>Fun</strong></h5>
+                            <a href={`https://clubhouse-clone-rooms.herokuapp.com/fun`} target="_blank" className="btn btn-primary btn-sm"> Join</a>
+                        </div>
+                    </div>
+                    <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                        <div class="card-body box">
+                            <h5 class="card-title"><strong>Nature</strong></h5>
+                            <a href={`https://clubhouse-clone-rooms.herokuapp.com/nature`} target="_blank" className="btn btn-primary btn-sm"> Join</a>
+                        </div>
+                    </div>
+                    <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                        <div class="card-body box">
+                            <h5 class="card-title"><strong>Music</strong></h5>
+                            <a href={`https://clubhouse-clone-rooms.herokuapp.com/music`} target="_blank" className="btn btn-primary btn-sm"> Join</a>
+                        </div>
+                    </div>
                     
-                        {
-                            room.map((list) => {
-                                return <RoomCard list={list} />
-                            })
-                        }
-                    
+                    {
+                        room.map((list) => {
+                            return <RoomCard list={list} />
+                        })
+                    }
+
                 </div>
             </div>
             <p className='text-center'>Discover great Clubs and Discuss club Topics</p>
