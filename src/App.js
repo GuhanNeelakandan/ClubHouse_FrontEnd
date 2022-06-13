@@ -8,6 +8,7 @@ import SignUp from './Pages/SignUp';
 import Chats from './Pages/Chats';
 import Rooms from './Pages/Rooms';
 import CreateRoom from './Pages/CreateRoom';
+import JoinRoom from './Pages/JoinRoom';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/chat" element={<Chats />} />
         <Route path="/room" element={<Rooms />} />
         <Route path="/create" element={<CreateRoom />} />
+        <Route path="/join" element={<JoinRoom />} />
       </Routes>
     </BrowserRouter>
   );

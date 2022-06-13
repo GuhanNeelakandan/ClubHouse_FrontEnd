@@ -67,6 +67,7 @@ function Rooms() {
 
                 </div>
             </div>
+            <p className='text-center'>Copy the video Link and share to your friends to join!!!!</p>
             <p className='text-center'>Discover great Clubs and Discuss club Topics</p>
 
         </div>

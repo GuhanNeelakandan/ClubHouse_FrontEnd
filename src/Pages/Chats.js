@@ -36,6 +36,11 @@ useEffect(() => {
             <i class="fa fa-plus-circle" aria-hidden="true"></i>
             <span>Create Room</span>
           </li></Link>
+          <Link to={'/join'}>
+            <li class="nav-item">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            <span>Join Room</span>
+          </li></Link>
         </ul>
       </div>
     </div>
