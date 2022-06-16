@@ -65,7 +65,7 @@ function Login() {
                 </p>
                 <p className='mt-4 fs-5'>
                     username:test<br />
-                    password:admin123
+                    password:12345678
                 </p>
                 <Link to={'/signup'}><input type="submit" class="form-control btn btn-primary btn-sm mt-3" value={"Signup"} /></Link>
                 <div>
